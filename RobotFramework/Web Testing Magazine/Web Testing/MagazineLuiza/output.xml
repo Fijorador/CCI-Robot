@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.4 on win32)" generated="20230615 07:27:22.472" rpa="false" schemaversion="3">
+<suite id="s1" name="Magazine Testes" source="C:\Users\Pichau\Downloads\Mateus\Repositórios\Robot\Web Testing\MagazineLuiza\magazine_testes.robot">
+<test id="s1-t1" name="Caso de Teste 01 - Acessao ao menu &quot;Monitor&quot;" line="9">
+<kw name="Abrir o Navegador" library="magazine_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230615 07:27:22.801" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230615 07:27:22.801" endtime="20230615 07:27:24.380"/>
+</kw>
+<status status="PASS" starttime="20230615 07:27:22.801" endtime="20230615 07:27:24.380"/>
+</kw>
+<kw name="Acessar a homepage do site &quot;https://www.magazineluiza.com.br/&quot;" library="magazine_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL2}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230615 07:27:24.381" level="INFO">Opening url 'https://www.magazineluiza.com.br/'</msg>
+<status status="PASS" starttime="20230615 07:27:24.381" endtime="20230615 07:27:28.380"/>
+</kw>
+<status status="PASS" starttime="20230615 07:27:24.381" endtime="20230615 07:27:28.380"/>
+</kw>
+<kw name="Entrar no menu &quot;Todos Departamentos&quot;" library="magazine_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//a[@data-testid='link'][contains(.,'Todos os departamentos')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230615 07:27:28.382" level="INFO">Clicking element '//a[@data-testid='link'][contains(.,'Todos os departamentos')]'.</msg>
+<status status="PASS" starttime="20230615 07:27:28.381" endtime="20230615 07:27:28.736"/>
+</kw>
+<status status="PASS" starttime="20230615 07:27:28.381" endtime="20230615 07:27:28.736"/>
+</kw>
+<kw name="Verificar menu &quot;Todos Despartamentos&quot;" library="magazine_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//a[@data-testid='link'][contains(.,'Informática')])[1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230615 07:27:28.737" endtime="20230615 07:27:29.168"/>
+</kw>
+<status status="PASS" starttime="20230615 07:27:28.736" endtime="20230615 07:27:29.168"/>
+</kw>
+<kw name="Entrar no menu &quot;Informática&quot;" library="magazine_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=(//a[@data-testid='link'][contains(.,'Informática')])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230615 07:27:29.169" level="INFO">Clicking element '(//a[@data-testid='link'][contains(.,'Informática')])[1]'.</msg>
+<status status="PASS" starttime="20230615 07:27:29.169" endtime="20230615 07:27:29.361"/>
+</kw>
+<status status="PASS" starttime="20230615 07:27:29.168" endtime="20230615 07:27:29.361"/>
+</kw>
+<kw name="Verificar menu &quot;Informática&quot;" library="magazine_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//p[@font-size='2'][contains(.,'Monitor')])[1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230615 07:27:29.391" endtime="20230615 07:27:34.321"/>
+</kw>
+<status status="PASS" starttime="20230615 07:27:29.391" endtime="20230615 07:27:34.321"/>
+</kw>
+<kw name="Entrar menu &quot;Monitor&quot;" library="magazine_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//p[@font-size='2'][contains(.,'Monitor')])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230615 07:27:34.323" level="INFO">Clicking element '(//p[@font-size='2'][contains(.,'Monitor')])[1]'.</msg>
+<status status="PASS" starttime="20230615 07:27:34.322" endtime="20230615 07:27:34.586"/>
+</kw>
+<status status="PASS" starttime="20230615 07:27:34.321" endtime="20230615 07:27:34.586"/>
+</kw>
+<kw name="Verificar menu &quot;Monitor&quot;" library="magazine_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Monitores</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230615 07:27:34.591" endtime="20230615 07:27:34.690"/>
+</kw>
+<status status="PASS" starttime="20230615 07:27:34.590" endtime="20230615 07:27:34.691"/>
+</kw>
+<kw name="Fechar o Navegador" library="magazine_resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230615 07:27:34.692" endtime="20230615 07:27:38.077"/>
+</kw>
+<status status="PASS" starttime="20230615 07:27:34.691" endtime="20230615 07:27:38.077"/>
+</kw>
+<doc>Este teste verifica a disponibilidade
+do Menu Monitor através do dos menus "Todos Despartamentos" -&gt; "Informática"</doc>
+<tag>menus</tag>
+<tag>monitor</tag>
+<status status="PASS" starttime="20230615 07:27:22.798" endtime="20230615 07:27:38.077"/>
+</test>
+<test id="s1-t2" name="Caso de Teste 02 - Pesquisa de um Produto" line="24">
+<kw name="Abrir o Navegador" library="magazine_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230615 07:27:38.081" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230615 07:27:38.080" endtime="20230615 07:27:39.440"/>
+</kw>
+<status status="PASS" starttime="20230615 07:27:38.079" endtime="20230615 07:27:39.440"/>
+</kw>
+<kw name="Acessar a homepage do site &quot;https://www.magazineluiza.com.br/&quot;" library="magazine_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL2}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230615 07:27:39.441" level="INFO">Opening url 'https://www.magazineluiza.com.br/'</msg>
+<status status="PASS" starttime="20230615 07:27:39.441" endtime="20230615 07:27:43.125"/>
+</kw>
+<status status="PASS" starttime="20230615 07:27:39.441" endtime="20230615 07:27:43.125"/>
+</kw>
+<kw name="Digitar o nome do produto &quot;RX 4600G&quot;" library="magazine_resources">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//input[contains(@type,'search')]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230615 07:27:43.127" endtime="20230615 07:27:43.451"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[contains(@type,'search')]</arg>
+<arg>RX 4600G</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230615 07:27:43.451" level="INFO">Typing text 'RX 4600G' into text field '//input[contains(@type,'search')]'.</msg>
+<status status="PASS" starttime="20230615 07:27:43.451" endtime="20230615 07:27:44.641"/>
+</kw>
+<status status="PASS" starttime="20230615 07:27:43.126" endtime="20230615 07:27:44.641"/>
+</kw>
+<kw name="Clicar no botão de pesquisa" library="magazine_resources">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[contains(@type,'search')]</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230615 07:27:44.642" level="INFO">Sending key(s) ('ENTER',) to //input[contains(@type,'search')] element.</msg>
+<msg timestamp="20230615 07:27:45.818" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20230615 07:27:45.818" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230615 07:27:44.641" endtime="20230615 07:27:45.957"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>(//h2[contains(@data-testid,'product-title')])[1]</arg>
+<arg>100</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230615 07:27:45.958" endtime="20230615 07:27:47.853"/>
+</kw>
+<status status="PASS" starttime="20230615 07:27:44.641" endtime="20230615 07:27:47.853"/>
+</kw>
+<kw name="Validar se existe um produto listado" library="magazine_resources">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>(//h2[contains(@data-testid,'product-title')])[1]</arg>
+<arg>4600G</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230615 07:27:48.373" level="INFO">Element '(//h2[contains(@data-testid,'product-title')])[1]' contains text '4600G'.</msg>
+<status status="PASS" starttime="20230615 07:27:47.854" endtime="20230615 07:27:48.373"/>
+</kw>
+<status status="PASS" starttime="20230615 07:27:47.854" endtime="20230615 07:27:48.373"/>
+</kw>
+<kw name="Fechar o Navegador" library="magazine_resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230615 07:27:48.374" endtime="20230615 07:27:50.669"/>
+</kw>
+<status status="PASS" starttime="20230615 07:27:48.374" endtime="20230615 07:27:50.669"/>
+</kw>
+<doc>Este teste verifica a funcionalidade de busca</doc>
+<tag>pesquisar</tag>
+<tag>searchbar</tag>
+<status status="PASS" starttime="20230615 07:27:38.079" endtime="20230615 07:27:50.669"/>
+</test>
+<doc>Essa suite testa o site https://www.magazineluiza.com.br/</doc>
+<status status="PASS" starttime="20230615 07:27:22.475" endtime="20230615 07:27:50.671"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">menus</stat>
+<stat pass="1" fail="0" skip="0">monitor</stat>
+<stat pass="1" fail="0" skip="0">pesquisar</stat>
+<stat pass="1" fail="0" skip="0">searchbar</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Magazine Testes">Magazine Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
